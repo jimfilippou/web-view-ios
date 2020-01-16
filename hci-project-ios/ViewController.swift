@@ -9,10 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var website = "https://confident-mcnulty-638c3b.netlify.com/";
 
+    @IBOutlet weak var webpage: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        webpage.loadRequest(NSURLRequest(url: NSURL(string: website)! as URL) as URLRequest)
     }
 
 
